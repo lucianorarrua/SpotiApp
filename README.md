@@ -59,4 +59,4 @@ Para que el sitio web funcione, es necesario ingresar un token de autenticación
 
 ## Author
 
-- **Arrúa Luciano** - _Initial work_ - [PurpleBooth](https://github.com/lucianorarrua)
+- **Arrúa Luciano** - [PurpleBooth](https://github.com/lucianorarrua)
