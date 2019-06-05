@@ -1,0 +1,25 @@
+<div class="card-container">
+  <div class="selectable-image">
+    <img
+      [src]="artist.images[1].url"
+      class="card-img-top"
+      alt="Foto de {{ artist.name }}"
+    />
+    <h2 class="font-weight-bold text-center text-image"></h2>
+    <button
+      class="btn btn-outline-success btn-lg artist-button my-2 my-sm-0"
+      [routerLink]="['/artist', this.artist.id]"
+    >
+      Ir a artista
+    </button>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">{{ artist.name }}</h5>
+    <div *ngFor="let genre of (artist.genres | slice: 0:3)">
+      <span class="badge badge-primary">{{ genre }}></span>
+      <br />
+    </div>
+    <br />
+  </div>
+</div>
+<!-- [routerLink]="['artist', 'this.artist.id']" -->

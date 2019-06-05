@@ -1,0 +1,41 @@
+<h1>{{ 'Búsqueda de Spoti' | uppercase }}<b>APP</b></h1>
+
+<div class="form-group">
+  <label for=""></label>
+  <input
+    type="text"
+    class="form-control"
+    name="searchTerm"
+    aria-describedby="helpId"
+    #searchTerm
+    (keyup)="updatePage(searchTerm.value)"
+    placeholder="Buscar"
+  />
+  <small class="form-text text-muted"
+    >Ingrese un término de búsqueda. Puede ser un Artista o una Canción que
+    desee escuchar</small
+  >
+</div>
+<h1>{{ 'Canciones' | uppercase }}</h1>
+<ng-container *ngIf="loadTracks; else loadingTemplate">
+  <div class="card-columns">
+    <div class="card" *ngFor="let track of listaCanciones; let idx = index">
+      <app-track-card [track]="track" class="animated fadeIn fast">
+        <app-loading></app-loading>
+      </app-track-card>
+    </div>
+  </div>
+</ng-container>
+<h1 class="mt-5">{{ 'Artistas' | uppercase }}</h1>
+<ng-container *ngIf="loadArtists; else loadingTemplate">
+  <div class="card-columns">
+    <div class="card" *ngFor="let artist of listaArtistas; let idx = index">
+      <app-artist-card [artist]="artist" class="animated fadeIn fast">
+        <app-loading></app-loading>
+      </app-artist-card>
+    </div>
+  </div>
+</ng-container>
+<ng-template #loadingTemplate>
+  <app-loading class="d-flex justify-content-center"></app-loading>
+</ng-template>

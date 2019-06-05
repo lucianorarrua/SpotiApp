@@ -1,0 +1,12 @@
+<div class="card">
+  <img
+    class="card-img-top"
+    [src]="this.album.images[0].url"
+    alt="Card image cap"
+  />
+  <div class="card-body">
+    <h5 class="card-title">{{ this.album.name }}</h5>
+    <br />
+    <span class="badge badge-primary">{{ this.album.release_date }}></span>
+  </div>
+</div>

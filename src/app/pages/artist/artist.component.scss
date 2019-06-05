@@ -1,0 +1,30 @@
+@import '../../../styles/colors.scss';
+.list-group-item {
+  background: $pri_color;
+  border-color: $sec_color;
+  max-height: 60px;
+}
+
+hr {
+  border: none;
+  height: 2px;
+  color: $sec_color;
+  background-color: $sec_color;
+}
+
+.list-group-item:hover {
+  background: $sec_color;
+  color: $pri_color;
+  border-color: white;
+}
+
+.list-group-item:hover .play-button {
+  color: $pri_color;
+}
+
+.play-button {
+  color: $sec_color;
+  border: none;
+  cursor: pointer;
+  //border-radius: 5px;
+}

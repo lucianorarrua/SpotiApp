@@ -1,0 +1,42 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'styles/colors.scss';
+
+* {
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  background-color: $pri_color !important;
+  color: $sec_color !important;
+}
+
+hr {
+  border-color: $sec_color;
+}
+
+.puntero {
+  cursor: pointer;
+}
+
+.img-circle {
+  border-radius: 100%;
+  width: 150px;
+}
+
+.card-title,
+.card-text {
+  color: $pri_color;
+}
+
+.badge {
+  margin-left: 5px;
+}
+
+.btn-outline-success {
+  margin-left: 5px;
+}
+
+.img-thumb {
+  width: 50px;
+  height: 50px;
+}

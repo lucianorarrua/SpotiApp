@@ -1,0 +1,34 @@
+@import '../../../../styles/colors.scss';
+
+.selectable-image {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.card-img-top:hover {
+  opacity: 0.4;
+}
+
+.selectable-image:hover .artist-button {
+  visibility: visible;
+}
+
+.card-img-top {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.artist-button {
+  visibility: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+
+  cursor: pointer;
+  // El padding es para que el botón de la sensación de ser mas grande y sea más facil apretar
+  padding: 12px 24px;
+}

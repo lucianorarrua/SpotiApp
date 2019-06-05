@@ -1,0 +1,13 @@
+<h1>{{ 'Lista de recomendados por Spoti' | uppercase }}<b>APP</b></h1>
+<ng-container *ngIf="this.loadRecomendations; else loadingTemplate">
+  <div class="card-columns">
+    <div class="card" *ngFor="let track of recomendations; let idx = index">
+      <app-track-card [track]="track" class="animated fadeIn fast">
+        <app-loading></app-loading>
+      </app-track-card>
+    </div>
+  </div>
+</ng-container>
+<ng-template #loadingTemplate>
+  <app-loading class="d-flex justify-content-center"></app-loading>
+</ng-template>

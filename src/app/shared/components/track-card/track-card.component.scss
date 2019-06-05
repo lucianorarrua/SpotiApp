@@ -1,0 +1,42 @@
+.playable-image {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.playable-image:hover {
+  opacity: 0.4;
+}
+.playable-image:hover .play-button {
+  visibility: visible;
+}
+.card-img-top {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.play-button a:focus,
+.play-button button:focus {
+  outline: none;
+}
+
+.play-button {
+  visibility: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  color: grey;
+  // El padding es para que el botón de la sensación de ser mas grande y sea más facil apretar
+  padding: 12px 24px;
+  border: none;
+  // Esto es para que aparezca la manito cuando pasa por arriba
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.badge {
+  cursor: pointer;
+}

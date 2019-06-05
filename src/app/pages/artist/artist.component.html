@@ -1,0 +1,65 @@
+<img
+  [src]="this.artist.images[1].url"
+  alt="Imagen de {{ this.artist.name }}"
+  class="img-thumbnail"
+/>
+<h1 class="display-4">{{ this.artist.name }}</h1>
+<hr />
+<h2>{{ 'TOP' | uppercase }} <b> 10</b></h2>
+
+<div class="container d-flex justify-content-center">
+  <table class="table table-hover table-dark col-10">
+    <thead>
+      <tr>
+        <th scope="col" class="align-middle">
+          <i class="fas fa-sort-numeric-down"></i>
+        </th>
+        <th scope="col">Título</th>
+        <th scope="col">
+          <i class="fas fa-compact-disc "></i>
+        </th>
+        <th scope="col"><i class="fas fa-clock"></i></th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let track of topTracksArtist; let idx = index">
+        <th scope="row">{{ idx + 1 }}.</th>
+        <td class="align-middle">{{ track.name }}</td>
+        <td class="align-middle">
+          <img
+            [src]="track.album.images[1].url"
+            height="30"
+            width="30"
+            class="row-img mr-1"
+            alt=""
+          />
+          {{ track.album.name }}
+        </td>
+        <td class="align-middle">
+          ({{ this.millisToMinutesAndSeconds(track.duration_ms) }})
+        </td>
+        <td class="align-middle">
+          <button
+            class="btn play-button"
+            (click)="this.playTrack(track.preview_url)"
+          >
+            <i class="far fa-play-circle fa-lg"></i>
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<hr />
+<h2>{{ 'Álbumes' | uppercase }}</h2>
+<div class="card-deck container">
+  <div class="row">
+    <app-album-card
+      *ngFor="let album of this.albumsArtist"
+      class="col-4 mt-1 mb-1 p-0"
+      [album]="album"
+    ></app-album-card>
+  </div>
+</div>

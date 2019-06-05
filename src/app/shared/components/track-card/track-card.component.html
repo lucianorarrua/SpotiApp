@@ -1,0 +1,20 @@
+<div class="playable-image">
+  <img
+    [src]="track.album.images[1].url"
+    class="card-img-top position-relative"
+    [alt]="'Tapa de album ' + track.album.name"
+  />
+  <button class="btn play-button" (click)="this.playTrack(track.preview_url)">
+    <i class="far fa-play-circle fa-5x"></i>
+  </button>
+</div>
+<div class="card-body">
+  <h5 class="card-title">{{ track.name }}</h5>
+  <div *ngFor="let artista of track.artists | slice: 0:3">
+    <span class="badge badge-primary" [routerLink]="['/artist', artista.id]"
+      >{{ artista.name }}></span
+    >
+    <br />
+  </div>
+  <br />
+</div>
