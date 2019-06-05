@@ -52,6 +52,10 @@ Para que el sitio web funcione, es necesario ingresar un token de autenticación
 
 ![](https://user-images.githubusercontent.com/23145218/56782356-28a6a300-67bd-11e9-8b80-7c0b3b580b98.gif)
 
+### Consultando detalles de un artista
+
+![](https://user-images.githubusercontent.com/23145218/58927136-ea899100-8723-11e9-8b51-4f86305c7013.gif)
+
 ## Built With
 
 - [Angular 7](https://angular.io/) - Framework SPA
